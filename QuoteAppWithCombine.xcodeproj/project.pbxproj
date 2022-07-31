@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		98F878B1289028710038DC3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F878B0289028710038DC3E /* AppDelegate.swift */; };
 		98F878B3289028710038DC3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F878B2289028710038DC3E /* SceneDelegate.swift */; };
-		98F878B5289028710038DC3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F878B4289028710038DC3E /* ViewController.swift */; };
-		98F878B8289028710038DC3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F878B6289028710038DC3E /* Main.storyboard */; };
+		98F878B5289028710038DC3E /* QuoteVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F878B4289028710038DC3E /* QuoteVIewController.swift */; };
 		98F878BA2890287B0038DC3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F878B92890287B0038DC3E /* Assets.xcassets */; };
 		98F878BD2890287B0038DC3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F878BB2890287B0038DC3E /* LaunchScreen.storyboard */; };
+		98F878C8289028B20038DC3E /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F878C7289028B20038DC3E /* Quote.swift */; };
+		98F878CF2890388B0038DC3E /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F878CE2890388B0038DC3E /* QuoteService.swift */; };
+		98F878D12890A2360038DC3E /* QuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F878D02890A2360038DC3E /* QuoteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		98F878AD289028710038DC3E /* QuoteAppWithCombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteAppWithCombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F878B0289028710038DC3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98F878B2289028710038DC3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		98F878B4289028710038DC3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		98F878B7289028710038DC3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		98F878B4289028710038DC3E /* QuoteVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteVIewController.swift; sourceTree = "<group>"; };
 		98F878B92890287B0038DC3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98F878BC2890287B0038DC3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98F878BE2890287B0038DC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98F878C7289028B20038DC3E /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		98F878CE2890388B0038DC3E /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		98F878D02890A2360038DC3E /* QuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		98F878AF289028710038DC3E /* QuoteAppWithCombine */ = {
 			isa = PBXGroup;
 			children = (
+				98F878CD289038710038DC3E /* Network */,
+				98F878C9289028DC0038DC3E /* Assets */,
+				98F878C62890289A0038DC3E /* Controllers */,
+				98F878C52890288D0038DC3E /* ViewModel */,
+				98F878C4289028850038DC3E /* Model */,
 				98F878B0289028710038DC3E /* AppDelegate.swift */,
 				98F878B2289028710038DC3E /* SceneDelegate.swift */,
-				98F878B4289028710038DC3E /* ViewController.swift */,
-				98F878B6289028710038DC3E /* Main.storyboard */,
-				98F878B92890287B0038DC3E /* Assets.xcassets */,
 				98F878BB2890287B0038DC3E /* LaunchScreen.storyboard */,
 				98F878BE2890287B0038DC3E /* Info.plist */,
 			);
 			path = QuoteAppWithCombine;
+			sourceTree = "<group>";
+		};
+		98F878C4289028850038DC3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				98F878C7289028B20038DC3E /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		98F878C52890288D0038DC3E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				98F878D02890A2360038DC3E /* QuoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		98F878C62890289A0038DC3E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				98F878B4289028710038DC3E /* QuoteVIewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		98F878C9289028DC0038DC3E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				98F878B92890287B0038DC3E /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		98F878CD289038710038DC3E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				98F878CE2890388B0038DC3E /* QuoteService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +172,6 @@
 			files = (
 				98F878BD2890287B0038DC3E /* LaunchScreen.storyboard in Resources */,
 				98F878BA2890287B0038DC3E /* Assets.xcassets in Resources */,
-				98F878B8289028710038DC3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98F878B5289028710038DC3E /* ViewController.swift in Sources */,
+				98F878C8289028B20038DC3E /* Quote.swift in Sources */,
+				98F878B5289028710038DC3E /* QuoteVIewController.swift in Sources */,
 				98F878B1289028710038DC3E /* AppDelegate.swift in Sources */,
+				98F878D12890A2360038DC3E /* QuoteViewModel.swift in Sources */,
+				98F878CF2890388B0038DC3E /* QuoteService.swift in Sources */,
 				98F878B3289028710038DC3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +194,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		98F878B6289028710038DC3E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				98F878B7289028710038DC3E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		98F878BB2890287B0038DC3E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
