@@ -12,4 +12,8 @@ The application was built using:
 * Programmatic UI
 * Combine
 
+# Video 🎥
+https://user-images.githubusercontent.com/42741527/184004948-b102f468-8636-4ea6-a480-238bb8b3140d.mp4
+
+
 Cheers 🍿
